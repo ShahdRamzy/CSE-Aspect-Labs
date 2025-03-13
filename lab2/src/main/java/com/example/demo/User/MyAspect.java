@@ -16,7 +16,7 @@ class MyAspect {
 
 
         Object[] args = joinPoint.getArgs();
-        for (Object arg : args) {
+        for (Object arg : args)  {
             if (arg != null) {
                 System.out.println("[DATA]: " + arg.toString());
             }
