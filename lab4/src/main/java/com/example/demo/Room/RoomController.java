@@ -26,7 +26,7 @@ public class RoomController {
 
     // GET all rooms
     @GetMapping
-    @RateLimit(limit = 1, duration = 3600, keyPrefix = "getAllRooms")
+    @RateLimit(limit = 1, duration = 10, keyPrefix = "getAllRooms")
     public ResponseEntity<List<Room>> getAllRooms() {
         List<Room> rooms = roomService.getAllRooms();
         return ResponseEntity.ok(rooms);
